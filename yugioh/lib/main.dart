@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yugioh/bloc_pattern/home/home_page.dart';
 import 'package:yugioh/core/theme/theme_app.dart';
+import 'package:yugioh/core/providers/provider_cubit.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeApp.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const CounterGame(),
+      home: const ProviderCubit(),
     );
   }
 }

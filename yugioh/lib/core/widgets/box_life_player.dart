@@ -1,28 +1,29 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:yugioh/bloc_pattern/home/home_bloc.dart';
 import 'package:yugioh/core/utils/player_enum.dart';
 
 class BoxPlayer extends StatelessWidget {
   const BoxPlayer({
     super.key,
-    required this.controller,
+    // required this.controller,
     required this.playerLife,
     required this.typePlayer,
     required this.playerSelected,
+    this.onTap,
   });
+  
 
-  final LifeCounterBloc controller;
+  // final LifeCounterBloc controller;
   final int playerLife;
   final PlayerEnum? playerSelected;
   final PlayerEnum typePlayer;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GestureDetector(
-        onTap: () => controller.setSelectedPlayer(typePlayer),
+        // onTap: () => controller.setSelectedPlayer(typePlayer),
+        onTap: onTap,
         child: Container(
           height: 200,
           color: typePlayer == PlayerEnum.player2
