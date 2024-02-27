@@ -61,7 +61,6 @@ class LifeCounterCubit extends Cubit<GameStateCubit> {
           winningPlayer: _selectWinningPlayer(game),
         );
 
-        print(match.toString());
         await repository.insertMatch(match);
 
         _lifePlayer1 = 8000;
@@ -69,17 +68,9 @@ class LifeCounterCubit extends Cubit<GameStateCubit> {
         emit(
             InitialState(lifePlayer1: _lifePlayer1, lifePlayer2: _lifePlayer2));
       } catch (e) {
-        emit(GameStateCubitError(message: "Erro ao resetar jogo: $e"));
+        emit(GameStateCubitError(message: "Erro ao resetar jogo"));
       }
     }
-  }
-
-  getGames() async {
-    try {
-      final list = await repository.getListMatchs();
-
-      print(list);
-    } catch (e) {}
   }
 
   _selectWinningPlayer(LoadedState game) {

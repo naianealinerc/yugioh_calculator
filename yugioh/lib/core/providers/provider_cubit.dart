@@ -10,8 +10,12 @@ class ProviderCubit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => LifeCounterCubit(HomeRepositoryImpl()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => LifeCounterCubit(HomeRepositoryImpl()),
+        ),
+      ],
       child: const CounterGameCubit(),
     );
   }

@@ -33,8 +33,8 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
               onPressed: () {
                 final state = BlocProvider.of<LifeCounterCubit>(context).state;
                 BlocProvider.of<LifeCounterCubit>(context).resetGame(state);
-                final list =
-                    BlocProvider.of<LifeCounterCubit>(context).getGames();
+                // final list =
+                //     BlocProvider.of<LifeCounterCubit>(context).getGames();
 
                 counterController.text = '';
               },

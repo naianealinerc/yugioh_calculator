@@ -28,7 +28,7 @@ class HomeRepositoryImpl implements HomeRepository {
 
   Future _onCreate(Database db, int version) async {
     await db.execute('''
-          CREATE TABLE $_tableName (
+          CREATE TABLE IF NOT EXISTS $_tableName (
             $columnId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
             $columnLifePlayer1 INTEGER NOT NULL,
             $columnLifePlayer2 INTEGER NOT NULL,
