@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yugioh/core/utils/player_enum.dart';
 import 'package:yugioh/core/widgets/box_life_player.dart';
 import 'package:yugioh/core/widgets/counter_text_form_field.dart';
+import 'package:yugioh/core/widgets/custom_app_bar.dart';
+import 'package:yugioh/core/widgets/drawer_app.dart';
 import 'package:yugioh/pages/home/home_cubit.dart';
 import 'package:yugioh/pages/home/home_state.dart';
 
@@ -26,8 +28,7 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Yu-Gi-Oh!"),
+      appBar: CustomAppBar(
         actions: [
           IconButton(
               onPressed: () {
@@ -41,6 +42,7 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
               icon: const Icon(Icons.refresh))
         ],
       ),
+      drawer: const DrawerApp(),
       body: SingleChildScrollView(
         child: Column(
           children: [

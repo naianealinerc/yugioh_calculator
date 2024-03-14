@@ -9,6 +9,10 @@ class ThemeApp {
       shadowColor: Colors.transparent,
       centerTitle: true,
     ),
+    listTileTheme: const ListTileThemeData(
+      titleTextStyle: TextStyle(color: Colors.black, fontSize: 18),
+      minLeadingWidth: 8,
+    ),
     scaffoldBackgroundColor: Colors.indigo[50],
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
