@@ -68,10 +68,28 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Library/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "go_router",
+      "rootUri": "file:///Users/naianealinerc/.pub-cache/hosted/pub.dev/go_router-13.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/naianealinerc/.pub-cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/naianealinerc/.pub-cache/hosted/pub.dev/logging-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "matcher",
@@ -188,7 +206,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-02-27T19:17:43.918157Z",
+  "generated": "2024-03-14T16:49:18.888058Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }

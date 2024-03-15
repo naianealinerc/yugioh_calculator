@@ -1,6 +1,7 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:yugioh/pages/home/home_page.dart';
+import 'package:yugioh/pages/list_games/list_games_page.dart';
 
 class DrawerApp extends StatelessWidget {
   const DrawerApp({
@@ -27,12 +28,16 @@ class DrawerApp extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.add_circle_outline),
             title: const Text('Novo jogo'),
-            onTap: () {},
+            onTap: () {
+              context.go(CounterGameCubit.routeName);
+            },
           ),
           ListTile(
             leading: const Icon(Icons.history),
             title: const Text('Histórico de jogos'),
-            onTap: () {},
+            onTap: () {
+              context.go(ListGamesPage.routeName);
+            },
           ),
         ],
       ),

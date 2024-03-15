@@ -11,6 +11,8 @@ import 'package:yugioh/pages/home/home_state.dart';
 class CounterGameCubit extends StatefulWidget {
   const CounterGameCubit({super.key});
 
+  static const routeName = '/home';
+
   @override
   State<CounterGameCubit> createState() => _CounterGameCubitState();
 }

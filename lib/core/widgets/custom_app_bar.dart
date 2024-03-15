@@ -10,6 +10,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final overlay = Overlay.of(context);
+
     return AppBar(
       title: const Text("Yu-Gi-Oh!"),
       actions: actions,

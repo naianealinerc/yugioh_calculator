@@ -5,6 +5,8 @@ import 'package:yugioh/core/widgets/drawer_app.dart';
 class ListGamesPage extends StatelessWidget {
   const ListGamesPage({super.key});
 
+  static const routeName = '/history_games';
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

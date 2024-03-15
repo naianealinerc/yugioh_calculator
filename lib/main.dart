@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:yugioh/core/theme/theme_app.dart';
 import 'package:yugioh/core/providers/provider_cubit.dart';
+import 'package:yugioh/core/theme/theme_app.dart';
+import 'package:yugioh/core/routes/app_routes.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderCubit());
 }
 
 class MainApp extends StatelessWidget {
@@ -11,10 +12,19 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: Routes.router,
       theme: ThemeApp.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const ProviderCubit(),
+      // builder: (context, child) {
+      //   return Overlay(
+      //     initialEntries: [
+      //       OverlayEntry(
+      //         builder: (context) => const ProviderCubit(),
+      //       ),
+      //     ],
+      //   );
+      // },
     );
   }
 }

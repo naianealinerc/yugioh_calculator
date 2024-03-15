@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:yugioh/main.dart';
 import 'package:yugioh/pages/home/home_cubit.dart';
 import 'package:yugioh/pages/home/home_page.dart';
 import 'package:yugioh/repositories/home_repository.dart';
@@ -16,7 +17,7 @@ class ProviderCubit extends StatelessWidget {
           create: (context) => LifeCounterCubit(HomeRepositoryImpl()),
         ),
       ],
-      child: const CounterGameCubit(),
+      child: const MainApp(),
     );
   }
 }
