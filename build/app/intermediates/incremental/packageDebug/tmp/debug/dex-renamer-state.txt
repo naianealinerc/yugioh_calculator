@@ -1,4 +1,4 @@
-#Fri Mar 15 09:20:50 BRT 2024
+#Tue Mar 19 13:32:27 BRT 2024
 base.0=/Users/naianealinerc/Developer/Projetos Pessoais/yugioh_calculator/yugioh_calculator/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -11,6 +11,7 @@ class HomeRepositoryImpl implements HomeRepository {
   static const columnLifePlayer1 = 'lifePlayer1';
   static const columnLifePlayer2 = 'lifePlayer2';
   static const columnWinningPlayer = 'winningPlayer';
+  static const columnDate = 'date';
 
   late Database _db;
 
@@ -32,7 +33,8 @@ class HomeRepositoryImpl implements HomeRepository {
             $columnId INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
             $columnLifePlayer1 INTEGER NOT NULL,
             $columnLifePlayer2 INTEGER NOT NULL,
-            $columnWinningPlayer TEXT NOT NULL
+            $columnWinningPlayer TEXT NOT NULL,
+            $columnDate TEXT NOT NULL
           )
           ''');
   }

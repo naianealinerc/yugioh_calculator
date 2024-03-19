@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:yugioh/core/utils/date_formatted.dart';
 import 'package:yugioh/core/utils/player_enum.dart';
 import 'package:yugioh/pages/home/home_state.dart';
 import 'package:yugioh/models/match_game_model.dart';
@@ -59,6 +60,7 @@ class LifeCounterCubit extends Cubit<GameStateCubit> {
           lifePlayer1: game.lifePlayer1!,
           lifePlayer2: game.lifePlayer2!,
           winningPlayer: _selectWinningPlayer(game),
+          date: formattedDate(DateTime.now()),
         );
 
         await repository.insertMatch(match);

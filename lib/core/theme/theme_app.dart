@@ -30,6 +30,8 @@ class ThemeApp {
       titleMedium: TextStyle(color: Colors.white, fontSize: 45),
       titleSmall: TextStyle(color: Colors.white, fontSize: 20),
       bodyLarge: TextStyle(color: Colors.black, fontSize: 35),
+      bodyMedium: TextStyle(color: Colors.black, fontSize: 18),
+      bodySmall: TextStyle(color: Colors.black, fontSize: 15),
     ),
   );
 }
