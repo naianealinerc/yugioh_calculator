@@ -29,15 +29,17 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
 
   @override
   Widget build(BuildContext context) {
+    const sizeDefault = SizedBox(
+      height: 24,
+    );
     return Scaffold(
       appBar: CustomAppBar(
         actions: [
           IconButton(
               onPressed: () {
                 final state = BlocProvider.of<LifeCounterCubit>(context).state;
+
                 BlocProvider.of<LifeCounterCubit>(context).resetGame(state);
-                // final list =
-                //     BlocProvider.of<LifeCounterCubit>(context).getGames();
 
                 counterController.text = '';
               },
@@ -50,8 +52,8 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
           children: [
             BlocBuilder<LifeCounterCubit, GameStateCubit>(
               builder: (context, state) {
-                int player1 = 0;
-                int player2 = 0;
+                late int player1;
+                late int player2;
                 PlayerEnum? playerSelected;
 
                 if (state is InitialState) {
@@ -89,14 +91,8 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 120,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 24.0),
-                        child: CounterForm(
-                          controller: counterController,
-                        ),
-                      ),
+                    CounterForm(
+                      controller: counterController,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -123,9 +119,7 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 24,
-                    ),
+                    sizeDefault,
                     if (state is LoadingState)
                       const CircularProgressIndicator(),
                     if (state is GameStateCubitError) Text(state.message),
@@ -133,9 +127,7 @@ class _CounterGameCubitState extends State<CounterGameCubit> {
                 );
               },
             ),
-            const SizedBox(
-              height: 24,
-            ),
+            sizeDefault,
           ],
         ),
       ),
